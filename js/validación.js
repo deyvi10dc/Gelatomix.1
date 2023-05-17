@@ -1,8 +1,7 @@
-const apellidoIngresado = document.getElementById("apellido")
 
-const nombreIngresado = document.getElementById("nombre")
 
-const email = document.getElementById("correo")
+
+
 
 const boton = document.getElementById("boton")
 
@@ -10,88 +9,73 @@ const boton = document.getElementById("boton")
 
 boton.addEventListener("click",(e)=> {
     e.preventDefault();
-   
 
-    console.log("nombre", nombreIngresado.value);
+    const apellidoIngresado = document.getElementById("apellido").value.trim();
 
-    const apellido = apellidoIngresado.value
+    const nombreIngresado = document.getElementById("nombre").value.trim();
 
-    for (let i = 0; i<apellido.length; i++) {
-        var codigo = apellido.charCodeAt(i);
-        if(apellido!="" && (codigo>=65 && codigo<=90) || (codigo>=97 && codigo<=122)){
-            
-        }else if ((apellido=="" || !(codigo>=65 && codigo<=90) || (codigo>=97 && codigo<=122))) {
-            
-            alert("el apellido no puede tener numeros o caracteres especiales")
+    const email = document.getElementById("correo").value.trim();
 
-        }else {
-            alert("ingrese su apellido correctamente")
-        }
-    }
+    const telefonoIngresado = document.getElementById("numero").value.trim();
 
-})
+    const texIngresado = document.getElementById("tex").value.trim();
 
 
-boton.addEventListener("click",(e)=> {
-
-    e.preventDefault();
-
-    console.log("nombre", nombreIngresado.value);
-
-    const nombre = nombreIngresado.value
-
-    for (let i = 0; i<nombre.length; i++) {
-        var codigo = nombre.charCodeAt(i);
-        if(nombre!="" && (codigo>=65 && codigo<=90) || (codigo>=97 && codigo<=122)){
-            
-        }else if ((nombre=="" || !(codigo>=65 && codigo<=90) || (codigo>=97 && codigo<=122))) {
-            
-            alert("el nombre no puede tener numeros o caracteres especiales")
-
-        }else {
-            alert("ingrese su nombre correctamente")
-        }
-    }
-
-})
 
 
-boton.addEventListener("click",(e)=>{
-    e.preventDefault();
+
+
+
+
+
     
-    console.log("correo", email.value)
 
-    const emailIngresado = email.value
-    validarCorreo(emailIngresado);
+    if (apellidoIngresado === "" || nombreIngresado === "" || email === "" || telefonoIngresado === "" || texIngresado ===""){
+        alert("Por favor, complete todos los campos del formulario.");
+        return false;
+      }
+    for (var i = 0; i < apellidoIngresado.length; i++) {
+      var charCode = apellidoIngresado.charCodeAt(i);
+      if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
+        alert("El campo 'nombre' solo puede contener caracteres alfabéticos y espacios.");
+        return false;
+      }
+    }
+
+    for (var i = 0; i < nombreIngresado.length; i++) {
+        var charCode = nombreIngresado.charCodeAt(i);
+        if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
+          alert("El campo  solo puede contener caracteres alfabéticos y espacios.");
+          return false;
+        }
+      }
+
+    if( !( /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(email)) ) {
+        alert("El correo no es valido")
+        return false;
+    }
+
+    if( isNaN(telefonoIngresado) ) {
+      alert("solo numeros")
+      return false;
+    }
+
+
+    for (var i = 0; i < texIngresado.length; i++) {
+        var charCode = texIngresado.charCodeAt(i);
+        if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
+          alert("El campo  solo puede contener caracteres alfabéticos y espacios.");
+          return false;
+        }
+    }  
+
+    alert("Formulario enviado correctamente.");
+    return true;
+
+
+
 })
-
-const validarCorreo = (correo)=>{
-    let expReg= /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    let verificar = expReg.test(correo);
-    if(verificar ==true){
-        
-        alert("el correo válido");
-    
-    }else{
-        alert("el correo no es valido")
-    }
-}
-
-
-  
-
-boton.addEventListener("click",()=> {
-    valorIngresado = document.getElementById("campo").value;
-    if( valorIngresado == null || valorIngresado.length == 0 || /^\s+$/.test(valorIngresado) ) {
-
-      alert('su mensaje esta vacio');
-      
-    }
 
    
-})
-
-
-
 
 
