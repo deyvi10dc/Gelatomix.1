@@ -18,7 +18,7 @@ boton.addEventListener("click",(e)=> {
 
     const telefonoIngresado = document.getElementById("numero").value.trim();
 
-    const texIngresado = document.getElementById("tex").value.trim();
+    const texIngresado = document.getElementById("textarea").value.trim();
 
 
 
