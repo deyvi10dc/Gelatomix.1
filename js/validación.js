@@ -64,7 +64,7 @@ boton.addEventListener("click",(e)=> {
     for (var i = 0; i < texIngresado.length; i++) {
         var charCode = texIngresado.charCodeAt(i);
         if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
-          alert("El campo puede estar vacio");
+          alert("El campo no puede estar vacio");
           return false;
         }
     }  
