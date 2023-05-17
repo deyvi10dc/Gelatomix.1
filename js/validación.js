@@ -56,7 +56,7 @@ boton.addEventListener("click",(e)=> {
     }
 
     if( isNaN(telefonoIngresado) ) {
-      alert("solo numeros")
+      alert("solo se puede ingresar numeros")
       return false;
     }
 
