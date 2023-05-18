@@ -38,19 +38,34 @@ body {
 .menu .navbar ul li {
     position: relative;
     float: left;
+    padding: 15px 5px;
 }
 .menu .navbar ul li a {
     font-size: 16px;
-    padding: 20px;
+    padding: 8px;
     color: #fefefe;
-    display: block;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
+    
 
 }
 .menu .navbar ul li a:hover {
     color: #a0a0a0;
+    
 }
+
+.menu .navbar ul li i {
+    padding: 5px 3px;
+    color: #fefefe;
+   
+    
+
+}
+.menu .navbar ul li i:hover {
+    color: #a0a0a0;
+    
+}
+
 #menu {
     display: none;
 }
@@ -90,6 +105,7 @@ body {
     padding: 50px 0 150px 0;
 }
 .title {
+    margin-top: 10px;
     color: #fefefe;
     font-size: 45px;
     text-transform: uppercase;
@@ -303,7 +319,7 @@ body {
 
 @media(max-width:991px) {
     .menu {
-        padding: 20px;
+        padding: 10px;
     }
     .menu label {
         display: initial;
@@ -315,6 +331,7 @@ body {
         right: 0;
         background-color: #e70b25;
         display: none;
+        padding: 5px;
         
     }
     .menu .navbar ul li {
