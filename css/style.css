@@ -8,38 +8,36 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #026163;
+}
+.menu-behind {
+	width: 100%;
     background-color: #fefefe;
-    
-
 }
 .container {
     max-width: 1200px;
     margin: auto;
 }
-
-
-   
 .menu {
     position: absolute;
-    top: 0px;
+    top: 5px;
     right: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+/*
     background-color: #026163;
     box-shadow: 0 0 0.5rem #fefefe;
     border-radius: 5px;
-    
+*/
 }
 .logo {
-   
-    text-decoration: none;
-
+    height: 100px;
 }
 .menu .navbar ul {
-    display:initial ;
+    display: initial;
 }
 .menu .navbar ul li {
     position: relative;
@@ -49,30 +47,18 @@ body {
 .menu .navbar ul li a {
     font-size: 16px;
     padding: 8px;
-    color: #fefefe;
+    color: #1E1E26;
+	display: block;/*-------------------- p/abarcar más que el texto */
     text-transform: uppercase;
     font-weight: 600;
-    
-
 }
 .menu .navbar ul li a:hover {
-    color: #a0a0a0;
-    
+	box-shadow: inset 0 -3px 0;
 }
-
 .menu .navbar ul li i {
     padding: 5px 3px;
-    color: #fefefe;
-   
-    
-
+    color: #1E1E26;
 }
-.menu .navbar ul li i:hover {
-    color: #a0a0a0;
-    
-}
-
-
 #menu {
     display: none;
 }
@@ -86,10 +72,7 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    padding: 200px 0 100px 0;
-    
-    
-    
+    padding: 125px 0 50px 0;
 }
 .header-text {
     width: 40%;
@@ -98,27 +81,66 @@ body {
 .header-text h1 {
     font-size: 55px;
     line-height: 70px;
-    font-weight: 700;
-    color:  #1E1E26;
+    font-weight: 800;
+    color: #1E1E26;
     margin-bottom: 20px;
-    
 }
 .header-text p {
     font-size: 18px;
-    color:  #026163;;
+    color: #1E1E26;
 }
+/*============================== footer ==============================*/
+.footer-behind {
+	width: 100%;
+    background-color: #4B3B47;
+}
+.footer {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #4B3B47;
+}
+.logo-2 {
+    width: 150px;
+}
+.links h4 {
+    color: #fefefe;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.links ul li a {
+    color: #fefefe;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.links ul li {
+    color: #fefefe;
+}
+.socials {
+    display: flex;
+}
+.social {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fefefe;
+    border-radius: 50%;
+}
+.social:hover {
+    background-color: #0000ff;
+}
+.social img {
+    margin: 8px 0 0 10px;
+}
+/*++++++++++ fin principalmente de header y footer compartido ++++++++++*/
+/*============================== helado flotante ==============================*/
 .header-img {
     right: 0;
     position: absolute;
     bottom: 150px;
     width: 180px;
-    
-
-    
-    
-
 }
-
 .helado {
     width: 100%;
     height: 100%;
@@ -131,79 +153,42 @@ body {
     50%{
         transform: translateY(-1.5rem);
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer {
-    margin-top: 180px;
-    padding: 50px 0 50px 0;
-    display: flex;
-    justify-content: space-between;
-    background-color:  #026163;
-    
-   
-    
-   
-    
+/*============================== banner deslizante ==============================*/
+.slider-frame {
+	width: 1280px;
+    height: auto;
+	margin: auto ;
+	overflow: hidden;
+    margin: auto;
 }
-.logo-2 {
-    width: 150px;
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 20s infinite alternate ease-in-out;
 }
-.links h4 {
-    color: #fefefe;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+.slider-frame li {
+	width: 100%;
+	list-style: none;
 }
-.links ul li a {
-    color: #fefefe;
-    font-size: 16px; 
-    margin-bottom: 5px;
-    display: inline-block;
-
+.slider-frame img {
+	width: 100%;
 }
-.links ul li {
-    color: #fefefe;
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
 }
-.socials {
-    display: flex;
-
-}
-.social {
-    margin: 0 10px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid #fefefe;
-    border-radius: 50%;
-}
-.social:hover {
-    background-color: #e70b25;
-}
-.social img {
-    margin: 8px 0 0 10px;
-
-}
-
-
-
-
-
+/*============================== media queries ==============================*/
 @media(max-width:991px) {
     .menu {
         padding: 10px;
@@ -219,17 +204,20 @@ body {
         background-color: #e70b25;
         display: none;
         padding: 5px;
-        
     }
+    .logo {
+		height: 85px;
+	}
     .menu .navbar ul li {
         width: 100%;
-        
+        margin: -8px 0;
     }
-    .menu .navbar ul li a {
+    .menu .navbar ul li a, .menu .navbar ul li i {
         color: #fefefe;
     }
-    .menu .navbar ul li a:hover {
+    .menu .navbar ul li a:hover, .menu .navbar ul li i:hover {
         color: #a0a0a0;
+        box-shadow: none;
     }
     #menu:checked ~ .navbar {
         display: initial;
@@ -249,9 +237,7 @@ body {
     .header-img {
         display: none;
     }
-
 }
-
 @media(max-width:600px){
     .socials {
         justify-content: center;
@@ -264,54 +250,8 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-
     }
     .links h4 {
         margin: 25px 0 10px 0;
     }
-}
-/* estilo banner*/
-/* * {
-    margin: 0;
-    padding: 0;
-    font-family: lato;
-} */
-.slider-frame {
-   
-	width: 1280px;
-    height: auto;
-	margin: auto ;
-	overflow: hidden;
-    margin: auto;
-}
-
-.slider-frame ul {
-	display: flex;
-	padding: 0;
-	width: 400%;
-	
-	animation: slide 20s infinite alternate ease-in-out;
-}
-
-.slider-frame li {
-	width: 100%;
-	list-style: none;
-}
-
-.slider-frame img {
-	width: 100%;
-}
-
-@keyframes slide {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
 }
