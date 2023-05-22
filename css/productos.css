@@ -8,14 +8,16 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
-   background-color:  #026163;;
-
+	background-color: #026163;
+}
+.menu-behind {
+	width: 100%;
+    background-color: #fefefe;
 }
 .container {
     max-width: 1200px;
     margin: auto;
 }
-
 .menu {
     position: absolute;
     top: 5px;
@@ -25,15 +27,17 @@ body {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+/*
     background-color: #026163;
     box-shadow: 0 0 0.5rem #fefefe;
     border-radius: 5px;
+*/
 }
 .logo {
-    width: 150px;
+    height: 100px;
 }
 .menu .navbar ul {
-    display: inline;
+    display: initial;
 }
 .menu .navbar ul li {
     position: relative;
@@ -43,29 +47,18 @@ body {
 .menu .navbar ul li a {
     font-size: 16px;
     padding: 8px;
-    color: #fefefe;
+    color: #1E1E26;
+	display: block;/*-------------------- p/abarcar más que el texto */
     text-transform: uppercase;
     font-weight: 600;
-    
-
 }
 .menu .navbar ul li a:hover {
-    color: #a0a0a0;
-    
+	box-shadow: inset 0 -3px 0;
 }
-
 .menu .navbar ul li i {
     padding: 5px 3px;
-    color: #fefefe;
-   
-    
-
+    color: #1E1E26;
 }
-.menu .navbar ul li i:hover {
-    color: #a0a0a0;
-    
-}
-
 #menu {
     display: none;
 }
@@ -94,15 +87,61 @@ body {
 }
 .header-text p {
     font-size: 18px;
+    color: #1E1E26;
+}
+/*============================== footer ==============================*/
+.footer-behind {
+	width: 100%;
+    background-color: #4B3B47;
+}
+.footer {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #4B3B47;
+}
+.logo-2 {
+    width: 150px;
+}
+.links h4 {
+    color: #fefefe;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.links ul li a {
+    color: #fefefe;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.links ul li {
     color: #fefefe;
 }
-
-
-
-
-
-.product-menu {
-    padding: 50px 0 150px 0;
+.socials {
+    display: flex;
+}
+.social {
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fefefe;
+    border-radius: 50%;
+}
+.social:hover {
+    background-color: #0000ff;
+}
+.social img {
+    margin: 8px 0 0 10px;
+}
+/*++++++++++ fin principalmente de header y footer compartido ++++++++++*/
+/*============================== MAIN ==============================*/
+/*------------------------------ título ------------------------------*/
+.main-content {
+    padding: 50px 0;
+}
+.title-content {
+    display: flex;
+    position: relative;
 }
 .title {
     margin-top: 10px;
@@ -111,13 +150,6 @@ body {
     text-transform: uppercase;
     margin-bottom: 45px;
 }
-
-.product {
-    display: flex;
-    position: relative;
-
-} 
-
 .menu-nav {
     display: flex;
     margin-bottom: 100px;
@@ -128,21 +160,17 @@ body {
     padding: 10px 35px;
     border-radius: 25px;
     color: #fefefe;
-    font-size: 16px;
     font-weight: 800;
-    background-color: #6d6262eb;
+    background-color: #6d6262;
     cursor: pointer;
-
 }
 .tab.active {
-
-    background:linear-gradient(90deg, #e70b25 0% , #900314 100%);
+    background:linear-gradient(90deg, #e70b25 0%, #900314 100%);
 }
 .tab.active::after {
     content: "";
     position: absolute;
     width: 100%;
-
 }
 .tab-content {
     display: none;
@@ -156,7 +184,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    
 }
 .box-1,
 .box-2,
@@ -169,8 +196,6 @@ body {
     border-radius: 5px;
     z-index: 1000;
     display: none;
-   
-
 }
 .box-1:nth-child(1),
 .box-1:nth-child(2),
@@ -190,24 +215,15 @@ body {
 .box-3:nth-child(4) {
     display: inline-block;
 }
-
 .image {
-    width: 50%;
-   margin-bottom: 40px;
-   align-items: center;  
+	width: 50%;
+	margin-bottom: 40px;
+	align-items: center;
 }
-
-    
-
 .image img {
     width: 100%;
     height: 100%;
-    
 }
-
-
-
-
 .content h3 {
     font-size: 20px;
     color: #1E1E26;
@@ -217,7 +233,6 @@ body {
     font-size: 15px;
     color: #1E1E26;
     line-height: 2;
-    font-size: 15px;
     padding: 15px 0;
 }
 .btn {
@@ -247,9 +262,7 @@ body {
 .buy {
     padding: 1px 15px 0px 15px;
     border-radius: 15px;
-    background: linear-gradient(90deg, #e70b25 0%,#e70b25 100% );
-    
-
+    background: linear-gradient(90deg, #e70b25 0%, #e70b25 100%);
 }
 .buy img {
     width: 15px;
@@ -261,62 +274,14 @@ body {
     border-radius: 25px;
     border: 1px solid #fefefe;
     color: #fefefe;
-    font-size: 16px;
     cursor: pointer;
 }
 .load-more:hover {
-    background: linear-gradient(90deg, #e70b25 0%, #e70b25 100%);
+    background: linear-gradient(90deg, #e70b25 0%, #900314 100%);
     border-color: rgba(10, 0, 3, 0.418);
     color: #fefefe;
 }
-
-
-
-.footer {
-    padding: 150px 0 100px 0;
-    display: flex;
-    justify-content: space-between;
-    background-color:  #026163;
-   
-    
-}
-.logo-2 {
-    width: 150px;
-}
-.links h4 {
-    color: #fefefe;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-.links ul li a {
-    color: #fefefe;
-    font-size: 16px; 
-    margin-bottom: 5px;
-    display: inline-block;
-}
-.links ul li {
-    color: #fefefe;
-}
-.socials {
-    display: flex;
-
-}
-.social {
-    margin: 0 10px;
-    height: 40px;
-    width: 40px;
-    border: 1px solid #fefefe;
-    border-radius: 50%;
-}
-.social:hover {
-    background-color: #0000ff;
-}
-.social img {
-    margin: 8px 0 0 10px;
-
-}
-
-
+/*============================== media queries ==============================*/
 @media(max-width:991px) {
     .menu {
         padding: 10px;
@@ -332,17 +297,20 @@ body {
         background-color: #e70b25;
         display: none;
         padding: 5px;
-        
     }
+    .logo {
+		height: 85px;
+	}
     .menu .navbar ul li {
         width: 100%;
-        
+        margin: -8px 0;
     }
-    .menu .navbar ul li a {
+    .menu .navbar ul li a, .menu .navbar ul li i {
         color: #fefefe;
     }
-    .menu .navbar ul li a:hover {
+    .menu .navbar ul li a:hover, .menu .navbar ul li i:hover {
         color: #a0a0a0;
+        box-shadow: none;
     }
     #menu:checked ~ .navbar {
         display: initial;
@@ -359,18 +327,16 @@ body {
     .header-text h1 {
         font-size: 40px;
     }
-    
     .header-img {
         width: 100%;
         margin-top: 45px;
     }
-    .product-menu {
+    .main-content {
         padding: 30px;
     }
     .title {
         margin-bottom: 20px;
     }
-    
     .menu-nav {
         flex-direction: column;
         align-items: center;
@@ -384,8 +350,6 @@ body {
     .box .image {
         height: 200px;
     }
-    
-
 }
 @media(max-width:600px){
     .socials {
@@ -399,7 +363,6 @@ body {
         flex-direction: column;
         align-items: center;
         text-align: center;
-
     }
     .links h4 {
         margin: 25px 0 10px 0;
