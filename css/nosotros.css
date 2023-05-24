@@ -59,6 +59,9 @@ body {
     padding: 5px 3px;
     color: #1E1E26;
 }
+.menu .navbar ul li i:hover {
+    scale: 1.5;
+}
 #menu {
     display: none;
 }
