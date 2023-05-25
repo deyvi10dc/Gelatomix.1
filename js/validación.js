@@ -37,7 +37,7 @@ boton.addEventListener("click",(e)=> {
     for (var i = 0; i < apellidoIngresado.length; i++) {
       var charCode = apellidoIngresado.charCodeAt(i);
       if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
-        alert("El campo 'nombre' solo puede contener caracteres alfabéticos y espacios.");
+        alert("El campo apellido solo puede contener caracteres alfabéticos y espacios.");
         return false;
       }
     }
@@ -45,7 +45,7 @@ boton.addEventListener("click",(e)=> {
     for (var i = 0; i < nombreIngresado.length; i++) {
         var charCode = nombreIngresado.charCodeAt(i);
         if (!((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122) || charCode === 32)) {
-          alert("El campo  solo puede contener caracteres alfabéticos y espacios.");
+          alert("El campo nombre solo puede contener caracteres alfabéticos y espacios.");
           return false;
         }
       }
