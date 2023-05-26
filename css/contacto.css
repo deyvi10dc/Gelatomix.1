@@ -144,20 +144,20 @@ body {
 /*============================== MAIN ==============================*/
 /*------------------------------ título ------------------------------*/
 .main-content {
-    padding: 50px 0;
+    padding: 20px 0;
 }
 .title-content {
+    margin-top: 50px;
     display: flex;
     position: relative;
 }
 .title {
-    margin-top: 10px;
-    color: #fefefe;
-    font-size: 45px;
+    margin-top: 50px;
+    color: #000000;
+    font-size: 30px;
     text-transform: uppercase;
-/*
-    margin-bottom: 45px;
-*/
+    text-align: center;
+
 }
 
 .flex-container {
@@ -257,6 +257,15 @@ body {
     }
     .main-content {
         padding: 30px;  
+    }
+    .title {
+        margin-top: 50px;
+        color: #000000;
+        font-size: 20px;
+        text-transform: uppercase;
+        align-items: center;
+       
+    
     }
 
     
