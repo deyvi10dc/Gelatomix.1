@@ -916,6 +916,35 @@
         
         </div>
     </main>
+
+
+    <div class="conten container">
+        <div id="compras1">
+            <h1>Agrega tus Toppings</h1>
+    
+            <label for="">Ingrese nombre del topping:</label>
+            <input type="text" v-model="nuevotopping">
+            <br>
+            <label for="">Ingrese cantidad:</label>
+            <input type="number" v-model="cantidad">
+            <br>
+            <button v-on:click="agregarTopping()">Agregar</button>
+            <button v-on:click="sumarCantidades()">Ver total</button>
+    
+            <ul>
+                <li v-for="topping in toppings">
+                    {{topping.nombre}} - {{topping.cantidad}}
+                </li>
+            </ul> 
+            <p>Total de toppings:{{totaltoppings}}</p>
+    
+        </div>
+
+    </div>
+  
+   
+    
+   
 <!-- ============================== FOOTER ============================== -->
     <footer class="footer-behind">
 		<div class="footer container">
@@ -968,5 +997,9 @@
     
 <!-- ============================== SCRIPT ============================== -->
 	<script src="./js/script.js"></script>
+
+     <!-- El cdn de Vue -->
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+     <script src="js/vue-1.js"></script>
 </body>
 </html>
